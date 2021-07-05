@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagorean Theorem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pythagorean Theorem</h1>
+   <p>Pythagorean Number till 20,000 at glance </p>
+  
+
+       
+   <script>
+   function pythagoreanNumber(limit)
+{
+     
+    // Triplet: a^2 + b^2 = c^2
+    let a, b, c = 0;
+ 
+    // Loop from 2 to max_limitit
+    let m = 2;
+ 
+    // Limiting c would limit
+    // all a, b and c
+    while (c < limit)
+    {
+         
+        // Now loop on j from 1 to i-1
+        for(let n = 1; n < m; n++)
+        {
+             
+           
+            // triplets using
+            // the relation between
+            // a, b and c
+            a = m * m - n * n;
+            b = 2 * m * n;
+            c = m * m + n * n;
+ 
+            if (c > limit)
+                break;
+ 
+            document.write(a + " " + b +
+                               " " + c + "</br>");
+        }
+        m++;
+    }
+}
+ 
+
+let limit = 20000;
+pythagoreanNumber(limit);
+  
+   </script> 
+   
+
+</body>
+</html>
